@@ -56,9 +56,9 @@ const es = new ESelector({
 
 名称 | 默认值 | 描述
 ----|-------|----
-rules | 'all' | 可选日期规则
+rules | 'all' | 可选日期规则, 可选值: 'all', 'past', 'future', 'weekday', 'fromData'
 rules_data | - | rules的补充参数
-default | - | 默认选择日期
+default | - | 默认选择日期, 可选值: 'today', '[date]'
 theme | 'default' | 主题色
 
 + rules & rules_data
@@ -123,7 +123,7 @@ theme | 'default' | 主题色
 + theme
     设置选择器主题
     + 可取值:  `[主题名]` 、 `{[名称: 值]}`
-        + `[主题名]`:  使用预设主题。[查看可用主题](/#/zh-Hans?id=available-themes)
+        + `[主题名]`:  使用预设主题。[查看可用主题](/#/zh-Hans/?id=可用主题)
 
         + `{[名称: 值]}`: 单独设置颜色
 		
