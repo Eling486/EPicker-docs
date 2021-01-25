@@ -4,8 +4,8 @@
 
 <div class="input-wrap">
   <script src="./assets/ESelector.min.js"></script>
-  <input class="input" id="input" type="text" onfocus="selector0()">
-  <div class="eselector" id="eselector"></div>
+  <input class="input" id="input" type="text" hidden>
+  <div class="eselector" id="eselector"><button class="docute-button load selector0" onclick="selector0()">Have a try</button></div>
 </div>
   <div class="landing-buttons">
     <a class="landing-button" target="_blank" href="https://github.com/Eling486/ESelector">
@@ -16,7 +16,9 @@
       Docs
     </a>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/docute-evanyou/dist/evanyou.min.js"></script>
+  <script>
+
+  </script>
   <style>
     h1 {
       margin: 0;
@@ -53,6 +55,24 @@
       user-select: none;
     }
 
+    .docute-button.load.selector0{
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      border-radius: 33px;
+      padding: 10px 30px;
+      background-color: white;
+      font-size: 14px;
+      font-weight: normal;
+      transition: background-color .3s ease;
+    }
+
+    .docute-button.load.selector0:hover{
+      border-color: #42b983;
+      color: #42b983;
+      text-decoration: none;
+    }
+
     .features {
       margin-top: 20px;
       margin-bottom: 10px;
@@ -66,7 +86,7 @@
       padding: 10px 30px;
       background-color: white;
       display: inline-block;
-      margin-right: 20px;
+      margin: 0 10px;
       color: #333;
     }
 
