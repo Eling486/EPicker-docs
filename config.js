@@ -40,17 +40,25 @@ docute.init({
             url: 'https://eselector.js.org'
         }),
         evanyou(),
+        selector()
     ]
 });
 
-function selector0() {
-        document.querySelector(".input#input").removeAttribute("hidden");
-        window.es0 = new ESelector({
-            container: document.getElementById('eselector'),
-            type: 'calendar',
-            rules: 'all',
-            target: document.getElementById('input'),
-            readonly: true,
-            theme: 'sakura_light'
+function selector() {
+    return function (context) {
+        context.event.on('landing:updated', function () {
+            selector0();
         });
+    };
+}
+
+function selector0() {
+    window.es0 = new ESelector({
+        container: document.getElementById('eselector'),
+        type: 'calendar',
+        rules: 'all',
+        target: document.getElementById('input'),
+        readonly: true,
+        theme: 'sakura_light'
+    });
 }
