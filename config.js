@@ -44,7 +44,6 @@ docute.init({
 });
 
 function selector0() {
-    if (!window.es0) {
         document.querySelector(".input#input").removeAttribute("hidden");
         window.es0 = new ESelector({
             container: document.getElementById('eselector'),
@@ -54,6 +53,4 @@ function selector0() {
             readonly: true,
             theme: 'sakura_light'
         });
-    }
-
 }
