@@ -58,7 +58,7 @@ const es = new ESelector({
 ----|-------|----
 rules | 'all' | 可选日期规则, 可选值: 'all', 'past', 'future', 'weekday', 'fromData'
 rules_data | - | rules的补充参数
-default | - | 默认选择日期, 可选值: 'today', '[date]'
+default | - | 默认选择日期, 可选值: 'today', '[date]' , `Date对象`
 theme | 'default' | 主题色
 
 + rules & rules_data
@@ -113,7 +113,7 @@ theme | 'default' | 主题色
 
 + default
     规定在选择器被激活时，是否存在默认选项（该选项将自动填入目标元素中）
-    + 可取值: `today` 、 `[date]`
+    + 可取值: `today` 、 `[date]` 、  `Date对象` 
     + `today` 为当天
     + `[date]` 格式为: 'yyyy-MM-dd'，例如：`2021-01-01`
     + 该参数留空为不设置默认选项

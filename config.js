@@ -7,7 +7,7 @@ docute.init({
     landing: 'landing.html',
     title: 'ESelector',
     repo: 'Eling486/ESelector',
-    'edit-link': 'https://github.com/Eling486/ESelector-docs',
+    'edit-link': 'https://github.com/Eling486/ESelector-docs/blob/gh-pages/README.md',
     nav: {
         default: [
             {

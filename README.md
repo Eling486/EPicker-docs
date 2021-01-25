@@ -57,7 +57,7 @@ Name | Default | Description
 ----|-------|----
 rules | 'all' | rules for optional dates, values: 'all', 'past', 'future', 'weekday', 'fromData'
 rules_data | - | supplementary options of `rules`
-default | - | default date selection
+default | - | default date selection, values: 'today', '[date]' , `Date()`
 theme | 'default' | theme color
 
 + rules & rules_data
@@ -112,7 +112,7 @@ theme | 'default' | theme color
 
 + default
     Set whether there is a default selection when the selector is activated (this selection will be automatically filled in the target element).
-    + values: `today` 、 `[date]`
+    + values: `today` , `[date]` , `Date()`
     + `today` : the default selection is the current date
     + `[date]` format: 'yyyy-MM-dd', for example:`2021-01-01`
     + leave this option blank for no default selection
@@ -121,7 +121,7 @@ theme | 'default' | theme color
 
 + theme
     Set selector theme
-    + values:  `[name]` 、 `{[color_name: value]}`
+    + values:  `[name]` , `{[color_name: value]}`
         - `[name]`:  Use the default theme. [View available themes](https://eselector.js.org/#/home?id=available-themes)
 		
         - `{[color_name: value]}`: set colors individually
