@@ -7,6 +7,16 @@ search: zh-Hans
 
  🍡 一套简洁、美观的选择器插件
 
+## 安装
+
+ + 从[GitHub](https://github.com/Eling486/ESelector/releases)上直接下载
+
+ + 使用 npm:
+
+    ```
+    npm install eselector --save
+    ```
+
 ## 快速入门
 
 ```html
@@ -23,6 +33,15 @@ const es = new ESelector({
     container: document.getElementById('eselector'),
     target: document.getElementById('eselector-target')
 });
+```
+
+使用模块管理器:
+
+```js
+import 'ESelector/dist/APlayer.min.css';
+import ESelector from 'ESelector';
+
+const ap = new APlayer(options);
 ```
 
 ## 基础参数

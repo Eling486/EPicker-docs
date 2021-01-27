@@ -6,6 +6,16 @@ search: english
 
  🍡 A simple and beautiful selector kit.
 
+## Installation
+
+ + Download from [GitHub](https://github.com/Eling486/ESelector/releases).
+
+ + Using npm:
+
+    ```
+    npm install eselector --save
+    ```
+
 ## Quick Start
 
 ```html
