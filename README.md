@@ -34,6 +34,15 @@ const es = new ESelector({
 });
 ```
 
+Work with module bundler:
+
+```js
+import 'eselector/dist/ESelector.min.css';
+import ESelector from 'eselector';
+
+const es = new ESelector(options);
+```
+
 ## Basic Options
 
 Name | Default | Description

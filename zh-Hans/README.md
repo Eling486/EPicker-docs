@@ -38,10 +38,10 @@ const es = new ESelector({
 使用模块管理器:
 
 ```js
-import 'ESelector/dist/APlayer.min.css';
-import ESelector from 'ESelector';
+import 'eselector/dist/ESelector.min.css';
+import ESelector from 'eselector';
 
-const ap = new APlayer(options);
+const es = new ESelector(options);
 ```
 
 ## 基础参数
