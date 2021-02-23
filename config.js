@@ -5,9 +5,9 @@ const langs = [
 
 docute.init({
     landing: 'landing.html',
-    title: 'ESelector',
-    repo: 'Eling486/ESelector',
-    'edit-link': 'https://github.com/Eling486/ESelector-docs/blob/gh-pages/README.md',
+    title: 'EPicker',
+    repo: 'Eling486/EPicker',
+    'edit-link': 'https://github.com/Eling486/EPicker-docs/blob/gh-pages/README.md',
     nav: {
         default: [
             {
@@ -35,9 +35,9 @@ docute.init({
     plugins: [
         docsearch({
             apiKey: '',
-            indexName: 'eselector',
+            indexName: 'epicker',
             tags: ['english', 'zh-Hans'],
-            url: 'https://eselector.js.org'
+            url: 'https://epicker.js.org'
         }),
         evanyou(),
         selector()
@@ -53,8 +53,8 @@ function selector() {
 }
 
 function selector0() {
-    window.es0 = new ESelector({
-        container: document.getElementById('eselector'),
+    window.es0 = new EPicker({
+        container: document.getElementById('epicker'),
         type: 'calendar',
         rules: 'all',
         target: document.getElementById('input'),
