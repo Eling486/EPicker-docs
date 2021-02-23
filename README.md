@@ -2,59 +2,59 @@
 search: english
 ---
 
-# ESelector
+# EPicker
 
  🍡 A simple and beautiful selector kit.
 
 ## Installation
 
- + Download from [GitHub](https://github.com/Eling486/ESelector/releases).
+ + Download from [GitHub](https://github.com/Eling486/EPicker/releases).
 
  + Using npm:
 
     ```
-    npm install eselector --save
+    npm install epicker --save
     ```
 
 ## Quick Start
 
 ```html
-<link rel="stylesheet" type="text/css" href="ESelector.min.css" />
+<link rel="stylesheet" type="text/css" href="EPicker.min.css" />
 <div class="input-wrap">
-    <input id="eselector-target" type="text">
-    <div id="eselector"></div>
+    <input id="epicker-target" type="text">
+    <div id="epicker"></div>
 </div>
-<script src="ESelector.min.js"></script>
+<script src="EPicker.min.js"></script>
 ```
 
 ```js
-const es = new ESelector({
-    container: document.getElementById('eselector'),
-    target: document.getElementById('eselector-target')
+const es = new EPicker({
+    container: document.getElementById('epicker'),
+    target: document.getElementById('epicker-target')
 });
 ```
 
 Work with module bundler:
 
 ```js
-import 'eselector/dist/ESelector.min.css';
-import ESelector from 'eselector';
+import 'epicker/dist/EPicker.min.css';
+import EPicker from 'epicker';
 
-const es = new ESelector(options);
+const es = new EPicker(options);
 ```
 
 ## Basic Options
 
 Name | Default | Description
 ----|-------|----
-container | document.querySelector('.eselector') | selector container
-target | document.querySelector('.eselector-target') | selector's target
+container | document.querySelector('.epicker') | selector container
+target | document.querySelector('.epicker-target') | selector's target
 readonly | true | enable the `target` readOnly
 type | 'calendar' | the type of selector, values: 'calendar'
 
 ## General API
 
-+ `ESelector.version`: static property, return the version of ESelector
++ `EPicker.version`: static property, return the version of EPicker
 
 + `es.destroy()`: destroy selector
 
@@ -63,9 +63,9 @@ type | 'calendar' | the type of selector, values: 'calendar'
  📅 A calendar with dates to choose from.
 
 ```js
-const es = new ESelector({
-    container: document.getElementById('eselector'),
-    target: document.getElementById('eselector-target'),
+const es = new EPicker({
+    container: document.getElementById('epicker'),
+    target: document.getElementById('epicker-target'),
     type: 'calendar'
 });
 ```
@@ -93,9 +93,9 @@ theme | 'default' | theme color
     + `weekday` can be used together with `future` OR `past` , for example:
 
         ```js
-        const es = new ESelector({
-            container: document.getElementById('eselector'),
-            target: document.getElementById('eselector-target'),
+        const es = new EPicker({
+            container: document.getElementById('epicker'),
+            target: document.getElementById('epicker-target'),
             type: 'calendar',
             rules: 'future weekday',
             rules_data: [1,3,7]
@@ -106,9 +106,9 @@ theme | 'default' | theme color
 	+ When using the `fromData` rule, you should also specify the `rules_data` , `rules_data` is an array, It contains multiple `JSON data` , the date corresponding to the value of `date` becomes optional, for example:
 
         ```js
-        const es = new ESelector({
-            container: document.getElementById('eselector'),
-            target: document.getElementById('eselector-target'),
+        const es = new EPicker({
+            container: document.getElementById('epicker'),
+            target: document.getElementById('epicker-target'),
             type: 'calendar',
             rules: 'fromData',
             rules_data: [
@@ -141,7 +141,7 @@ theme | 'default' | theme color
 + theme
     Set selector theme
     + values:  `[name]` , `{[color_name: value]}`
-        - `[name]`:  Use the default theme. [View available themes](https://eselector.js.org/#/home?id=available-themes)
+        - `[name]`:  Use the default theme. [View available themes](https://epicker.js.org/#/home?id=available-themes)
 		
         - `{[color_name: value]}`: set colors individually
 		
@@ -160,8 +160,8 @@ txtcolor_hover | #ffffff | text color when hovering
 for example:
 
 ```js
-const es = new ESelector({
-	container: document.getElementById('eselector'),
+const es = new EPicker({
+	container: document.getElementById('epicker'),
 	target: document.getElementById('input'),
 	type: 'calendar',
 	rules: 'future',

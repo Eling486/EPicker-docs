@@ -3,59 +3,59 @@ nav: zh-Hans
 search: zh-Hans
 ---
 
-# ESelector
+# EPicker
 
  🍡 一套简洁、美观的选择器插件
 
 ## 安装
 
- + 从[GitHub](https://github.com/Eling486/ESelector/releases)上直接下载
+ + 从[GitHub](https://github.com/Eling486/EPicker/releases)上直接下载
 
  + 使用 npm:
 
     ```
-    npm install eselector --save
+    npm install epicker --save
     ```
 
 ## 快速入门
 
 ```html
-<link rel="stylesheet" type="text/css" href="ESelector.min.css" />
+<link rel="stylesheet" type="text/css" href="EPicker.min.css" />
 <div class="input-wrap">
-    <input id="eselector-target" type="text">
-    <div id="eselector"></div>
+    <input id="epicker-target" type="text">
+    <div id="epicker"></div>
 </div>
-<script src="ESelector.min.js"></script>
+<script src="EPicker.min.js"></script>
 ```
 
 ```js
-const es = new ESelector({
-    container: document.getElementById('eselector'),
-    target: document.getElementById('eselector-target')
+const es = new EPicker({
+    container: document.getElementById('epicker'),
+    target: document.getElementById('epicker-target')
 });
 ```
 
 使用模块管理器:
 
 ```js
-import 'eselector/dist/ESelector.min.css';
-import ESelector from 'eselector';
+import 'epicker/dist/EPicker.min.css';
+import EPicker from 'epicker';
 
-const es = new ESelector(options);
+const es = new EPicker(options);
 ```
 
 ## 基础参数
 
 名称 | 默认值 | 描述
 ----|-------|----
-container | document.querySelector('.eselector') | 选择器容器元素
-target | document.querySelector('.eselector-target') | 选择结果填充元素
+container | document.querySelector('.epicker') | 选择器容器元素
+target | document.querySelector('.epicker-target') | 选择结果填充元素
 readonly | true | 结果填充元素是否为只读（当 `target` 为 `<input>` 时生效）
 type | 'calendar' | 选择器种类
 
 ## 通用API
 
-+ `ESelector.version`: 静态属性, 返回 ESelector 的版本号
++ `EPicker.version`: 静态属性, 返回 EPicker 的版本号
 
 + `es.destroy()`: 销毁选择器
 
@@ -64,9 +64,9 @@ type | 'calendar' | 选择器种类
  📅 一个可供选择日期的日历
 
 ```js
-const es = new ESelector({
-    container: document.getElementById('eselector'),
-    target: document.getElementById('eselector-target'),
+const es = new EPicker({
+    container: document.getElementById('epicker'),
+    target: document.getElementById('epicker-target'),
     type: 'calendar'
 });
 ```
@@ -94,9 +94,9 @@ theme | 'default' | 主题色
     + `weekday` 可与 `future` 或 `past` 同时使用，例如: 
 
         ```js
-        const es = new ESelector({
-            container: document.getElementById('eselector'),
-            target: document.getElementById('eselector-target'),
+        const es = new EPicker({
+            container: document.getElementById('epicker'),
+            target: document.getElementById('epicker-target'),
             type: 'calendar',
             rules: 'future weekday',
             rules_data: [1,3,7]
@@ -107,9 +107,9 @@ theme | 'default' | 主题色
     + 使用 `fromData` 规则时，要同时规定 `rules_data` 参数，`rules_data` 为一个数组，其中包含多个 `JSON数据` ， `date` 的值对应日期将变为可选项，例如: 
 
         ```js
-        const es = new ESelector({
-            container: document.getElementById('eselector'),
-            target: document.getElementById('eselector-target'),
+        const es = new EPicker({
+            container: document.getElementById('epicker'),
+            target: document.getElementById('epicker-target'),
             type: 'calendar',
             rules: 'fromData',
             rules_data: [
@@ -142,7 +142,7 @@ theme | 'default' | 主题色
 + theme
     设置选择器主题
     + 可取值:  `[主题名]` 、 `{[名称: 值]}`
-        + `[主题名]`:  使用预设主题。[查看可用主题](https://eselector.js.org/#/zh-Hans/?id=可用主题)
+        + `[主题名]`:  使用预设主题。[查看可用主题](https://epicker.js.org/#/zh-Hans/?id=可用主题)
 
         + `{[名称: 值]}`: 单独设置颜色
 		
@@ -161,8 +161,8 @@ txtcolor_hover | #ffffff | 鼠标悬停时的字体颜色
 例如: 
 
 ```js
-const es = new ESelector({
-	container: document.getElementById('eselector'),
+const es = new EPicker({
+	container: document.getElementById('epicker'),
 	target: document.getElementById('input'),
 	type: 'calendar',
 	rules: 'future',
